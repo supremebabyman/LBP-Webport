@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@emulatorjs/cores": "^4.2.3"
+  }
+}

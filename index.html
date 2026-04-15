@@ -48,6 +48,7 @@
 		</h1>
 		<h1
 			style="text-align: center; font-size: 48px; color: white"
+			id="loadingWarning"
 			
 		>
 			Please be patient while the game is loading. This will take a while.
@@ -98,6 +99,7 @@
 			Promise.all([mergeFiles(getParts("game.zip", 1, 13))]).then(
 				([gameUrl]) => {
 					document.getElementById("loadingText").remove();
+					document.getElementById("loadingWarning").remove();
 					document.getElementById("game").style.display = "none";
 					document.getElementById("game").style.display = "block";
 					window.EJS_player = "#game";
