@@ -1,5 +1,17 @@
 {
+  "name": "lbp-webport",
+  "version": "1.0.0",
+  "description": "Little Big Planet Webport",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
-    "@emulatorjs/cores": "^4.2.3"
+    "@emulatorjs/cores": "^4.2.3",
+    "express": "^4.18.2"
   }
 }
