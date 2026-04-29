@@ -4998,19 +4998,21 @@ async function loadfrontend() {
   app = h(App).$;
   document.body.appendChild(app.root);
 }
-  
-      function getParts(file, start, end) {
-          let parts = [];
-          for (let i = start; i <= end; i++) {
-              parts.push(file + ".part" + i);
-          }
-          return parts;
-      }
+
+const DATA_PART_COUNT = 13;
+
+function getParts(file, start, end) {
+  let parts = [];
+  for (let i = start; i <= end; i++) {
+    parts.push(file + ".part" + i);
+  }
+  return parts;
+}
 
 // Auto-download and play functionality
 async function autoDownloadAndPlay(app) {
   try {
-    const parts = getParts("_framework/data/data.data", 1, 13);
+    const parts = getParts("_framework/data/data.data", 1, DATA_PART_COUNT);
     const total = parts.length;
 
     app.loadingText = "Starting download…";
